@@ -8,7 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function testSum(a,b) {
+function sum(a,b) {
   var result = a + b;
   var message = 'the sum of' + a + 'and' + b + 'is' + message;
   return[result, message];
@@ -52,10 +52,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-  var sumResult = a + b + c;
-  var mulResult = a * b * c;
-  var message = 'This is the sum of' + a + '+' + b + '+' + 'c' + 'and the product of' + a + '*' + b + '*' + c;
-  return[sumResult, mulResult, message];
+  var sumResult = sum(a,b);
+  var sumResult2 = sum(sumResult[0], c)[0];
+  var mulResult = multiply(a,b);
+  var mulResult2 = multiply(mulResult[0], c)[0];
+  var message = 'This is the sum of sumResult and sumResult2. ' + 'This is the product of mulResult and mulResult2';
+  return [sumResult2, mulResult2, message];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,7 +76,7 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2,3,4]; //eslint-disable-line
+var testArray = [2,3,4];
 
 function sumArray(testArray){ //eslint-disable-line
 
@@ -82,7 +84,7 @@ function sumArray(testArray){ //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
