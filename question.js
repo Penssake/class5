@@ -56,8 +56,8 @@ function sumAndMultiply(a,b,c){
   var sumResult2 = sum(sumResult[0], c)[0];
   var mulResult = multiply(a,b);
   var mulResult2 = multiply(mulResult[0], c)[0];
-  var message = ['' + 'The product of 4 and 7 and 5 is 140'];
-  return[sumResult, mulResult, message];
+  var message = 'This is the sum of sumResult and sumResult2. ' + 'This is the product of mulResult and mulResult2';
+  return [sumResult2, mulResult2, message];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
