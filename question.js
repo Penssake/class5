@@ -102,9 +102,14 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
-
+function multiplyArray(testMultiplyArray){ //eslint-disable-line
+  var total = 1;
+  for (var i = 0; i < multiplyArray.length; i++) {
+    total = multiply(multiplyArray[i], total);
+  }
+  return total;
 }
+
 /////
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
