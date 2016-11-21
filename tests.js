@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a,b) {
   var result = a + b;
-  var message = 'the sum of' + a + 'and' + b + 'is' + message;
+  var message = 'the sum of ' + a + 'and ' + b + 'is ' + message;
   return[result, message];
 }
 
@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
   var result = a * b;
-  var message = 'This is the result of' + a + 'multiplied by' + b;
+  var message = 'This is the result of ' + a + 'multiplied by ' + b;
   return[result, message];
 }
 
@@ -52,11 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){
-  var sumResult = sum(a,b);
-  var sumResult2 = sum(sumResult[0], c)[0];
-  var mulResult = multiply(a,b);
-  var mulResult2 = multiply(mulResult[0], c)[0];
-  var message = 'This is the sum of sumResult and sumResult2. ' + 'This is the product of mulResult and mulResult2';
+  var sumResult = sum(a,b)[0];
+  var sumResult2 = sum(sumResult, c)[0];
+  var mulResult = multiply(a,b)[0];
+  var mulResult2 = multiply(mulResult, c)[0];
+  var message = 'This is the sum of sumResult and sumResult2. ' + 'This is the product of mulResult and mulResult2 ';
   return [sumResult2, mulResult2, message];
 }
 
@@ -78,10 +78,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2,3,4];
 
-function sumArray(numArray){
+function sumArray(testArray){
   var total = 0;
-  for(var i = 0; i < numArray.length; i++) {
-    total = sum(numArray[i], total);
+  for(var i = 0; i < sumArray.length; i++) {
+    total = sum(sumArray[i], total);
   }
   return total;
 }
@@ -102,14 +102,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArry){ //eslint-disable-line
+function multiplyArray(testMultiplyArray){
   var total = 1;
-  for (var i = 0; i < multArray.length; i++) {
-    total = multArray[i];
-  } return total;
+  for (var i = 0; i < multiplyArray.length; i++) {
+    total = multiply(multiplyArray[i], total);
+  }
+  return total;
 }
-
-// Here is the test for multiplyArray(); uncomment it to run it
-multiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
